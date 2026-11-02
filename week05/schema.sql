@@ -49,5 +49,6 @@ UNIQUE (course_id, lecturer_id, academic_session),
 FOREIGN KEY (course_id) REFERENCES Course(course_id),
 FOREIGN KEY (lecturer_id) REFERENCES Lecturer(lecturer_id)
 );
+
 ALTER TABLE Student ADD COLUMN phone VARCHAR(15) AFTER full_name;
 ALTER TABLE Course ADD CONSTRAINT chk_credit_units CHECK (credit_units BETWEEN 1 AND 6);
